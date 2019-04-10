@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4809226718692446}
   - component: {fileID: 114365996086107936}
   - component: {fileID: 114897216661607104}
+  - component: {fileID: 65240080187598176}
   m_Layer: 5
   m_Name: Inventory_Item_Grid
   m_TagString: Untagged
@@ -71,6 +72,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65240080187598176
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1267956021149562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114365996086107936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,7 +118,7 @@ MonoBehaviour:
   mHeight: 70
   mDepth: 1
   mMat: {fileID: 0}
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
@@ -157,7 +170,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 32
   mHeight: 32
-  mDepth: 2
+  mDepth: 5
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
