@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1001,
+    "name": "小平血药",
+    "icon_name": "icon-potion1",
+    "type": "Drug",
+    "hp": "50",
+    "mp": "0",
+    "price_sell": "50",
+    "price_buy": "60",
+    "stackable": false,
+    "stackMax": 5
+  },
+  {
+    "id": 1002,
+    "name": "大平血药",
+    "icon_name": "icon-potion2",
+    "type": "Drug",
+    "hp": "100",
+    "mp": "0",
+    "price_sell": "70",
+    "price_buy": "100",
+    "stackable": true,
+    "stackMax": 8
+  },
+  {
+    "id": 1003,
+    "name": "蓝药",
+    "icon_name": "icon-potion3",
+    "type": "Drug",
+    "hp": "0",
+    "mp": "100",
+    "price_sell": "60",
+    "price_buy": "80",
+    "stackable": true,
+    "stackMax": 5
+  }
+
+
+]
