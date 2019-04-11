@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65240080187598176}
   m_Layer: 5
   m_Name: Inventory_Item_Grid
-  m_TagString: Untagged
+  m_TagString: InventoryItemGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: 29056518aafb01b49a5b08faf8e30cff, type: 2}
-  mText: 00
+  mText: 
   mFontSize: 28
   mFontStyle: 1
   mAlignment: 0
@@ -218,3 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8071110443aca684b9740cc260a5b234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridID: 0
+  itemNum: 0
+  numLabel: {fileID: 0}
