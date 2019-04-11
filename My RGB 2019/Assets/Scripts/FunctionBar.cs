@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class FunctionBar : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public void OnBagButtonClick()
+    {
+        UIInventory.Instance.ChangePos();
+    }
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
