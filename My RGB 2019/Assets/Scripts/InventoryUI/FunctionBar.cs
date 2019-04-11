@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FunctionBar : MonoBehaviour {
-
+    public void OnStatusButton()
+    {
+        StatusManager.Instance.TransformState();
+    }
     public void OnBagButtonClick()
     {
         UIInventory.Instance.ChangePos();

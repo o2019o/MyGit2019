@@ -66,7 +66,7 @@ public class UIInventory : MonoBehaviour {
     /// <summary>
     /// 显示 和隐藏背包
     /// </summary>
-    private bool isShow = true;
+    private bool isShow = false;
     private void Show()
     {
         isShow = true;
