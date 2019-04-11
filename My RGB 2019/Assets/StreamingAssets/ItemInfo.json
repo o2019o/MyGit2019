@@ -1,7 +1,7 @@
 [
   {
     "id": 1001,
-    "name": "小平血药",
+    "name": "小瓶血药",
     "icon_name": "icon-potion1",
     "type": "Drug",
     "hp": "50",
@@ -13,7 +13,7 @@
   },
   {
     "id": 1002,
-    "name": "大平血药",
+    "name": "大瓶血药",
     "icon_name": "icon-potion2",
     "type": "Drug",
     "hp": "100",

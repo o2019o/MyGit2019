@@ -63,25 +63,28 @@ public class UIInventory : MonoBehaviour {
             }
         }
     }
+    /// <summary>
+    /// 显示 和隐藏背包
+    /// </summary>
     private bool isShow = true;
-
-    public void Show()
+    private void Show()
     {
         isShow = true;
         tween.PlayForward();
     }
-    public void Hide()
+    private void Hide()
     {
         isShow = false;
         tween.PlayReverse();
     }
+    //移动位置
     public void ChangePos()
     {
-        if (isShow)
+        if (!isShow)
         {
-            Hide();
+            Show();
         }
         else
-            Show();
+            Hide();
     }
 }

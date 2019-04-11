@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114325164048084488}
   - component: {fileID: 114975516803786488}
   - component: {fileID: 65350088661071046}
+  - component: {fileID: 114715908307202260}
+  - component: {fileID: 114829043964298414}
   m_Layer: 5
   m_Name: Inventory_Item
   m_TagString: InventoryItem
@@ -108,6 +110,50 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: fa8c69c28d4a8cc4f8716a90bbdd937d, type: 2}
   mSpriteName: icon-potion1
   mFillCenter: 1
+--- !u!114 &114715908307202260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1607148381269648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e862f287df53bb64db191162f851a296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHoverOver:
+  - mTarget: {fileID: 114975516803786488}
+    mMethodName: OnHoverOver
+    mParameters: []
+    oneShot: 0
+  onHoverOut:
+  - mTarget: {fileID: 114975516803786488}
+    mMethodName: OnHoverOut
+    mParameters: []
+    oneShot: 0
+  onPress: []
+  onRelease: []
+  onSelect: []
+  onDeselect: []
+  onClick: []
+  onDoubleClick: []
+  onDragStart: []
+  onDragEnd: []
+  onDragOver: []
+  onDragOut: []
+  onDrag: []
+--- !u!114 &114829043964298414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1607148381269648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bd99dcf43f97d48bb6215c70f0cd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needsActiveCollider: 1
 --- !u!114 &114975516803786488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,3 +171,4 @@ MonoBehaviour:
   interactable: 1
   pressAndHoldDelay: 1
   sprite: {fileID: 0}
+  itemId: 0
