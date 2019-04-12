@@ -7,10 +7,15 @@ public class UIInventory : MonoBehaviour {
     public List<UIInventoryItemGrid> itemGridList = new List<UIInventoryItemGrid>();
     public GameObject inventoryItem;
     private TweenPosition tween;
+
+    private int coinCount = 1000;
+    public UILabel coinLabel;
+
     private void Awake()
     {
         Instance = this;
         tween = GetComponent<TweenPosition>();
+        coinLabel = GameObject.Find("CoinLabel").GetComponent<UILabel>();
     }
     void Start () {
         
@@ -23,14 +28,14 @@ public class UIInventory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             int itemID = Random.Range(1001, 1004);
-            GetItem(itemID);
+            GetItem(itemID,0);
           //  Debug.Log(itemID);
         }
     }
-    public void GetItem(int id)
+    public void GetItem(int id,int count)//count 购买的数量
     {
         UIInventoryItemGrid grid = null;
         foreach(UIInventoryItemGrid temp in itemGridList)
@@ -42,7 +47,7 @@ public class UIInventory : MonoBehaviour {
         }
         if(grid != null)
         {
-            grid.PulsName();
+            grid.PulsName(count);
         }
         else
         {
@@ -59,7 +64,7 @@ public class UIInventory : MonoBehaviour {
                 item.transform.SetParent(grid.transform);
                 item.transform.localPosition = Vector3.zero;
                 item.transform.localScale = Vector3.one;
-                grid.SetGridId(id);
+                grid.SetGridId(id,count);
             }
         }
     }
@@ -86,5 +91,16 @@ public class UIInventory : MonoBehaviour {
         }
         else
             Hide();
+    }
+    //这个是取款方法，购买物品时调用，来减少金币
+    public bool GetCoin(int count)
+    {
+        if(coinCount >= count)
+        {
+            coinCount -= count;
+            coinLabel.text = coinCount.ToString();//更新金币 显示
+            return true;
+        }
+        return false;
     }
 }

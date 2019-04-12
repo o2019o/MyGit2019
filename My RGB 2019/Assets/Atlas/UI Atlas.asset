@@ -915,10 +915,10 @@ MonoBehaviour:
     y: 821
     width: 36
     height: 36
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
+    borderLeft: 3
+    borderRight: 3
+    borderTop: 3
+    borderBottom: 3
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
