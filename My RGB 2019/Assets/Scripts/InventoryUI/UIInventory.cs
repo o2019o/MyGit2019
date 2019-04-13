@@ -31,11 +31,11 @@ public class UIInventory : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.F))
         {
             int itemID = Random.Range(1001, 1004);
-            GetItem(itemID,0);
+            GetItem(itemID,1);
           //  Debug.Log(itemID);
         }
     }
-    public void GetItem(int id,int count)//count 购买的数量
+    public void GetItem(int id,int count=1)//count 购买的数量
     {
         UIInventoryItemGrid grid = null;
         foreach(UIInventoryItemGrid temp in itemGridList)

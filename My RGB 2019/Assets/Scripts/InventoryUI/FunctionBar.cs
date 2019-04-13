@@ -11,6 +11,10 @@ public class FunctionBar : MonoBehaviour {
     {
         UIInventory.Instance.ChangePos();
     }
+    public void OnEquipButtonClick()
+    {
+        UIEquipment.Instance.TransformState();
+    }
     // Use this for initialization
     void Start () {
 		
