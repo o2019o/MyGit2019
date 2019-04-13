@@ -30,7 +30,7 @@ public class UIInventory : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            int itemID = Random.Range(1001, 1004);
+            int itemID = Random.Range(2001,2023);
             GetItem(itemID,1);
           //  Debug.Log(itemID);
         }

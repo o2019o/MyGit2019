@@ -74,8 +74,8 @@ public class ShopDrugNPC : NPC {
     public void OnOKButtonClick()
     {
         int count = int.Parse(NumberInput.value);//得到输入数量
-        ObjectInfo info = ItemInfo.Instance.GetObjectInfoByID(buy_Id);
-        int price = info.Price_buy;//得到购买价格
+        ObjectInfo info = ObjectsInfo._instance.GetObjectInfoById(buy_Id);
+        int price = info.price_buy;//得到购买价格
         int price_total = price * count;//得到总价
         bool success = UIInventory.Instance.GetCoin(price_total);//判断总价是否买的起
         if(success)

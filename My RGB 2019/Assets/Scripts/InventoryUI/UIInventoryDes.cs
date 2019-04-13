@@ -32,9 +32,9 @@ public class UIInventoryDes : MonoBehaviour {
         gameObject.SetActive(true);
         timer = 0.1f;
 
-        ObjectInfo info = ItemInfo.Instance.GetObjectInfoByID(id);
+        ObjectInfo info = ObjectsInfo._instance.GetObjectInfoById(id);
         string des = "";
-        switch (info.Type)
+        switch (info.type)
         {
             case ObjectType.Drug:
                 des = GetFoodDes(info);
@@ -45,11 +45,11 @@ public class UIInventoryDes : MonoBehaviour {
     private string GetFoodDes(ObjectInfo info)
     {
         string str = "";
-        str += "名称：" + info.Name + "\n";
-        str += "+HP：" + info.Hp + "\n";
-        str += "+MP：" + info.Mp + "\n";
-        str += "出售价：" + info.Price_sell + "\n";
-        str += "购买价：" + info.Price_buy + "\n";
+        str += "名称：" + info.name + "\n";
+        str += "+HP：" + info.hp + "\n";
+        str += "+MP：" + info.mp + "\n";
+        str += "出售价：" + info.price_sell + "\n";
+        str += "购买价：" + info.price_buy + "\n";
         return str;
     }
 
