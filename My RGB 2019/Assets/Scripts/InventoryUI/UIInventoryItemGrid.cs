@@ -32,6 +32,23 @@ public class UIInventoryItemGrid : MonoBehaviour {
         itemNum += unm;
         numLabel.text = itemNum.ToString();
     }
+    //用来减去数量的，可以用来装备的穿戴,返回值，表示是否减去成功
+    public bool MinusNumber(int num = 1)
+    {
+        if (this.itemNum >= num)//当前的数量大于 要减去 的数量
+        {
+            this.itemNum -= num;
+            numLabel.text = this.itemNum.ToString();//减了之后 ，要更新显示
+            if (this.itemNum == 0)
+            {
+                //要清空这个物品格子
+                CheakItem();//清空存储的信息 
+                Destroy(this.GetComponentInChildren<UIInventoryItem>().gameObject);//销毁物品格子
+            }
+            return true;
+        }
+        return false;
+    }
     public void CheakItem()
     {
         gridID = 0;

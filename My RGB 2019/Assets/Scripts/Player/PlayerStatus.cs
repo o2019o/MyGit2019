@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum PlayerType
+{
+    Swordman,//剑土
+    Magician,//魔法师
+    Common//通用
+}
 /// <summary>
 /// 主角 的属性类
 /// </summary>
 public class PlayerStatus : MonoBehaviour {
-
+    public PlayerType heroType = PlayerType.Swordman;
     public int grade = 1;
     public int hp = 100;
     public int mp = 100;

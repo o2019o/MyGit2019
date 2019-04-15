@@ -8,7 +8,7 @@ public class UIInventory : MonoBehaviour {
     public GameObject inventoryItem;
     private TweenPosition tween;
 
-    private int coinCount = 1000;
+    public int coinCount = 1000;
     public UILabel coinLabel;
 
     private void Awake()

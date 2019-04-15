@@ -24,7 +24,17 @@ public class UIInventoryItem : UIDragDropItem
         base.Update();
         if(isHover)
         {
-            UIInventoryDes.Instance.ShowInfo(itemId);          
+            UIInventoryDes.Instance.ShowInfo(itemId);      
+            if(Input.GetMouseButtonDown(1))
+            {
+                //根据 要穿戴的装备 信息来 判断物品栏 中的物品 是否可 穿戴
+                bool success = UIEquipment.Instance.Dress(itemId);
+                if(success)
+                {
+                    //穿戴了 装备 ，那物品格子 里的物品数量 减 1
+                    transform.parent.GetComponent<UIInventoryItemGrid>().MinusNumber();
+                }
+            }
         }
 	}
     /// <summary>
