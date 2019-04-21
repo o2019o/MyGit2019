@@ -15,6 +15,10 @@ public class FunctionBar : MonoBehaviour {
     {
         UIEquipment.Instance.TransformState();
     }
+    public void OnSkillButtonClick()
+    {
+        SkillUI._instance.TransformState();
+    }
     // Use this for initialization
     void Start () {
 		

@@ -107,12 +107,13 @@ public class UIEquipment : MonoBehaviour {
             itemGo.transform.localPosition = Vector3.zero;
             itemGo.GetComponent<UIEquipmentItem>().SetItemInfo(info);
         }
-      //  UpdateProperty();
+        UpdateProperty();
         return true;
     }
     //  卸下装备
     public void TakeOff(int id, GameObject go)
     {
+
         UIInventory.Instance.GetItem(id);//在 物品栏里生成 这个装备
         GameObject.Destroy(go);
         UpdateProperty();

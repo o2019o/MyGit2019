@@ -12,7 +12,7 @@ public enum PlayerType
 /// </summary>
 public class PlayerStatus : MonoBehaviour {
     public PlayerType heroType = PlayerType.Swordman;
-    public int grade = 1;
+    public int level = 1;//角色等级
     public int hp = 100;
     public int mp = 100;
     public int coin = 200;
